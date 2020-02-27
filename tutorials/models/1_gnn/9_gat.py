@@ -361,7 +361,7 @@ for epoch in range(30):
 #
 # You can see that the model seems to learn different attention weights. To
 # understand the distribution more thoroughly, measure the `entropy
-# <https://en.wikipedia.org/wiki/Entropy_(information_theory>`_) of the
+# <https://en.wikipedia.org/wiki/Entropy_(information_theory)>`_ of the
 # attention distribution. For any node :math:`i`,
 # :math:`\{\alpha_{ij}\}_{j\in\mathcal{N}(i)}` forms a discrete probability
 # distribution over all its neighbors with the entropy given by
