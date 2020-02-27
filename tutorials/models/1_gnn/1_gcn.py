@@ -23,10 +23,11 @@ how DGL combines graph with deep neural network and learn structural representat
 # passing perspective; the math can be found `here <math_>`_.
 # It boils down to the following step, for each node :math:`u`:
 # 
-# 1) Aggregate neighbors' representations :math:`h_{v}` to produce an
-# intermediate representation :math:`\hat{h}_u`.  2) Transform the aggregated
-# representation :math:`\hat{h}_{u}` with a linear projection followed by a
-# non-linearity: :math:`h_{u} = f(W_{u} \hat{h}_u)`.
+# 1. Aggregate neighbors' representations :math:`h_{v}` to produce an
+# intermediate representation :math:`\hat{h}_u`.
+#
+# 2. Transform the aggregated representation :math:`\hat{h}_{u}` with a
+# linear projection followed by a non-linearity: :math:`h_{u} = f(W_{u} \hat{h}_u)`.
 # 
 # We will implement step 1 with DGL message passing, and step 2 with the
 # ``apply_nodes`` method, whose node UDF will be a PyTorch ``nn.Module``.
